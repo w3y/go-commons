@@ -105,3 +105,11 @@ func toCamelInitCase(s string, initCase bool) string {
 func ToCamel(s string) string {
 	return toCamelInitCase(s, true)
 }
+
+func CensorString(str string) string {
+	if len(str) <= 6 {
+		return "***"
+	}
+
+	return str[:2] + "***" + str[len(str)-2:]
+}
